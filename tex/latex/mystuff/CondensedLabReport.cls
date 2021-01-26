@@ -5,7 +5,7 @@
 
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[english]{babel}
-\RequirePackage[legalpaper,margin=1in]{geometry}
+\RequirePackage[letterpaper,margin=1in]{geometry}
 \RequirePackage{fourier}
 \RequirePackage{enumitem}
 \RequirePackage{titlesec}
@@ -15,6 +15,7 @@
 \RequirePackage{float}
 \RequirePackage{amsmath}
 \RequirePackage{pdfpages}
+\RequirePackage{parskip}
 
 
 \setkeys{Gin}{width=\textwidth}
@@ -25,7 +26,9 @@
 \pagestyle{fancy}
 
 \titleformat{\section}{\bfseries\fontsize{16pt}{12}\selectfont}{}{0em}{}
-\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
+\titleformat{\subsection}{\bfseries\fontsize{12pt}{12}\selectfont}{}{0em}{}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
 
 \setlength\parskip{1em plus 0.1em minus 0.2em}
 
