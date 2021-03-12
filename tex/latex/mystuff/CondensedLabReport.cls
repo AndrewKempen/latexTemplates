@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{formalLabReport}[Format class for formal lab reports]
+\ProvidesClass{CondensedLabReport}[Format class for condensed lab reports]
 
 \LoadClass[12pt]{article}
 
@@ -16,6 +16,15 @@
 \RequirePackage{amsmath}
 \RequirePackage{pdfpages}
 \RequirePackage{parskip}
+\RequirePackage{xurl} % Fixes URL's expending past edges of pages
+\RequirePackage{hyperref} % Adds URLs and linking
+\RequirePackage[capitalise,noabbrev]{cleveref}
+
+\fancypagestyle{plain}{%
+    \renewcommand{\headrulewidth}{0pt}%
+    \fancyhf{}%
+    \rfoot{\thepage}%
+}
 
 
 \setkeys{Gin}{width=\textwidth}
@@ -26,7 +35,7 @@
 \pagestyle{fancy}
 
 \titleformat{\section}{\bfseries\fontsize{16pt}{12}\selectfont}{}{0em}{}
-\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
+\titlespacing\section{0pt}{14pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
 \titleformat{\subsection}{\bfseries\fontsize{12pt}{12}\selectfont}{}{0em}{}
 \titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
 
@@ -68,9 +77,8 @@
   
 \end{center}
 
-\thispagestyle{empty}
-
-\setcounter{page}{1}
+\rfoot{\thepage}
+\thispagestyle{plain}
 
 \lhead{\classCode \space - \className}
 \rhead{\semester}
