@@ -1,20 +1,24 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{formalLabReport}[Format class for formal lab reports]
+\ProvidesClass{FormalLabReport}[Format class for formal lab reports]
 
 \LoadClass[12pt]{article}
 
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[english]{babel}
-\RequirePackage[letterpaper,margin=1in]{geometry}
-\RequirePackage{fourier}
-\RequirePackage{enumitem}
+\RequirePackage[letterpaper,margin=1in]{geometry} % Configures page size and bounds
+\RequirePackage{fourier} % Sets font to fourier style
+\RequirePackage{enumitem} % For numbered lists
 \RequirePackage{titlesec}
-\RequirePackage{graphicx}
-\RequirePackage{fancyhdr}
-\RequirePackage[tableposition=top]{caption}
-\RequirePackage{float}
-\RequirePackage{amsmath}
-\RequirePackage{parskip}
+\RequirePackage{graphicx} % Adds ability to insert images
+\RequirePackage{fancyhdr} % Adds header
+\RequirePackage[tableposition=top]{caption} % Adds captioning, sets caption position for tables to top
+\RequirePackage{float} % Adds H float option to make images position in line with text
+\RequirePackage{amsmath} % Provides math symbols and tools
+\RequirePackage{parskip} % Removes tabs at beginning of paragraphs
+\RequirePackage{xurl} % Fixes URL's expending past edges of pages
+\RequirePackage{hyperref} % Adds URLs and linking
+\RequirePackage[capitalise,noabbrev]{cleveref}
+
 
 \setkeys{Gin}{width=\textwidth}
 
