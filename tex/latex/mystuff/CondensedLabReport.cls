@@ -18,6 +18,7 @@
 \RequirePackage{parskip}
 \RequirePackage{xurl} % Fixes URL's expending past edges of pages
 \RequirePackage{hyperref} % Adds URLs and linking
+\RequirePackage{minted} % Adds code blocks with highlighting
 \RequirePackage[capitalise,noabbrev]{cleveref}
 
 \fancypagestyle{plain}{%
@@ -26,6 +27,13 @@
     \rfoot{\thepage}%
 }
 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    breaklinks=true,
+}
 
 \setkeys{Gin}{width=\textwidth}
 
